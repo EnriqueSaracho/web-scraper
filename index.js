@@ -2,10 +2,14 @@ const PORT = 8000;
 const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
-
 const app = express();
 
 const url = "https://www.theguardian.com/uk";
+
+app.get(); // get data
+app.post(); // add data
+app.put(); // edit data
+
 axios(url)
   .then((response) => {
     const html = response.data;
