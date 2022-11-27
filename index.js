@@ -3,6 +3,8 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
 const app = express();
+const cors = require("cors");
+app.use(cors());
 
 const url = "https://www.theguardian.com/uk";
 
@@ -12,7 +14,7 @@ const url = "https://www.theguardian.com/uk";
 // app.delete(); // delete data
 
 app.get("/", (req, res) => {
-  res.json("Kiki");
+  res.json("This is my webscrapper");
 });
 
 app.get("/results", (req, res) => {
@@ -30,7 +32,6 @@ app.get("/results", (req, res) => {
           url,
         });
       });
-      //console.log(articles)
       res.json(articles);
     })
     .catch((err) => console.log(err));
