@@ -11,6 +11,14 @@ const url = "https://www.theguardian.com/uk";
 // app.put(); // edit data
 // app.delete(); // delete data
 
+app.get("/", (req, res) => {
+  res.json("Kiki");
+});
+
+app.get('/results', ()=> {
+  
+})
+
 axios(url)
   .then((response) => {
     const html = response.data;
