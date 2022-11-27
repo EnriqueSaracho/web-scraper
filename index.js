@@ -30,9 +30,10 @@ app.get("/results", (req, res) => {
           url,
         });
       });
+      //console.log(articles)
       res.json(articles);
     })
     .catch((err) => console.log(err));
 });
 
-app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
+// app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
