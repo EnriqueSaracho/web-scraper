@@ -6,9 +6,10 @@ const app = express();
 
 const url = "https://www.theguardian.com/uk";
 
-app.get(); // get data
-app.post(); // add data
-app.put(); // edit data
+// app.get(); // get data
+// app.post(); // add data
+// app.put(); // edit data
+// app.delete(); // delete data
 
 axios(url)
   .then((response) => {
